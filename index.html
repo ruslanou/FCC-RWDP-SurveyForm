@@ -5,9 +5,98 @@
     <meta name="description" content="Survey Form">
     <meta name="author" content="Ahmad Ruslan">
     <meta name="keyword" content="Survey,Form">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <h1>Formulir Pendaftaran Universitas Avengers Hero</h1>
+    <div class="container">
+        <header>
+            <h1 id="title" class="text-center">Survey Pengembangan Fakultas Teknik Universitas XXX</h1>
+            <p id="description" class="description text-center">Isi data-data dibawah ini</p>
+        </header>
+        <form id="survey-form">
+            <div class="form-group">
+                <label for="name" id="name-label">Nama</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Masukan nama kamu" required>
+            </div>
+            <div class="form-group">
+                <label for="nim">NIM</label>
+                <input type="text" name="nim" id="nim" class="form-control" placeholder="Masukan NIM kamu" required>
+            </div>
+            <div class="form-group">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Masukan email kamu" required>
+            </div>
+            <div class="form-group">
+                <label for="number" id="number-label">Umur</label>
+                <input type="number" name="number" id="number" class="form-control" placeholder="Masukan umur kamu" min="15" max="50" required>
+            </div>
+            <div class="form-group">
+                <p>Jurusan</p>
+                <select name="jurusan" id="dropdown" class="form-control" required>
+                    <option name="Teknik Sipil">Teknik Sipil</option>
+                    <option name="Teknik Lingkungan">Teknik Lingkungan</option>
+                    <option name="Teknik Mesin">Teknik Mesin</option>
+                    <option name="Teknik Perkapalan">Teknik Perkapalan</option>
+                    <option name="Teknik Elektro">Teknik Elektro</option>
+                    <option name="Teknik Komputer">Teknik Komputer</option>
+                    <option name="Teknik Biomedik">Teknik Biomedik</option>
+                    <option name="Teknik Metalurgi dan Material">Teknik Metalurgi dan Material</option>
+                    <option name="Arsitektur">Arsitektur</option>
+                    <option name="Arsitektur Interior">Arsitektur Interior</option>
+                    <option name="Teknik Kimia">Teknik Kimia</option>
+                    <option name="Teknik Bioproses">Teknik Bioproses</option>
+                    <option name="Teknik Industri">Teknik Industri</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p>Angkatan</p>
+                <label>
+                    <input type="radio" name="angkatan" value="2019" class="input-radio" required>
+                    <span>2019</span>
+                </label>
+                <label>
+                    <input type="radio" name="angkatan" value="2018" class="input-radio">
+                    <span>2018</span>
+                </label>
+                <label>
+                    <input type="radio" name="angkatan" value="2017" class="input-radio">
+                    <span>2017</span>
+                </label>
+                <label>
+                    <input type="radio" name="angkatan" value="2016" class="input-radio">
+                    <span>2016</span>
+                </label>
+                <label>
+                    <input type="radio" name="angkatan" value="2015" class="input-radio">
+                    <span>2015</span>
+                </label>
+                <label>
+                    <input type="radio" name="angkatan" value="2014" class="input-radio">
+                    <span>2014</span>
+                </label>
+            </div>
+            <div class="form-group">
+                <p>
+                    Fasilitas apa yang butuh perbaikan
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+                <label><input type="checkbox" value="SIAK-NG" name="fasilitas" class="input-checkbox">SIAK-NG</label>
+                <label><input type="checkbox" value="Gedung" name="fasilitas" class="input-checkbox">Gedung Fakultas</label>
+                <label><input type="checkbox" value="Toilet" name="fasilitas" class="input-checkbox">Toilet</label>
+                <label><input type="checkbox" value="Perpustakaan" name="fasilitas" class="input-checkbox">Perpustakaan</label>
+                <label><input type="checkbox" value="Kantin" name="fasilitas" class="input-checkbox">Kantin</label>
+                <label><input type="checkbox" value="Administrasi" name="fasilitas" class="input-checkbox">Administrasi</label>
+            </div>
+            <div class="form-group">
+                <p>Deskripsikan lebih jelas tentang hal yang perlu diperbaiki</p>
+                <textarea id="comment" class="input-textarea" name="comment" placeholder="Deskripsikan disini"></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+
+        </form>
+    </div>
 </body>
 
 
